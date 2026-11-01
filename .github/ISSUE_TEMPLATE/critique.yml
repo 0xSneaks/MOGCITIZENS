@@ -1,0 +1,51 @@
+name: "Criticism / improvement"
+description: "Tell us what is weak, confusing, derivative or broken."
+title: "[CRITIQUE] "
+body:
+  - type: markdown
+    attributes:
+      value: "Critique the work, not the people. Be specific; disagree freely. This is not an execution request."
+  - type: input
+    id: target
+    attributes:
+      label: "Which feature, design or decision?"
+      placeholder: "Page, link, behavior or concept"
+    validations:
+      required: true
+  - type: textarea
+    id: critique
+    attributes:
+      label: "What's wrong or not working?"
+      description: "Concrete observations, not personal attacks."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Examples / evidence"
+      description: "What did you see? What is confirmed versus inferred?"
+    validations:
+      required: false
+  - type: textarea
+    id: alternative
+    attributes:
+      label: "What should we consider instead?"
+    validations:
+      required: true
+  - type: dropdown
+    id: author
+    attributes:
+      label: "Who prepared this?"
+      options:
+        - "Human"
+        - "Human with an AI agent"
+        - "AI agent posting with human approval"
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: "Public sharing and scope"
+      options:
+        - label: "I am authorized to post this publicly, included no secrets, and understand that this does not authorize a build."
+          required: true
