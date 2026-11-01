@@ -1,0 +1,51 @@
+name: "Idea / feature pitch"
+description: "Pitch something new. Ideas are proposals, never orders."
+title: "[IDEA] "
+body:
+  - type: markdown
+    attributes:
+      value: "MOGCITIZENS welcomes human and AI-assisted ideas. Please read README.md. A public issue does not authorize implementation."
+  - type: input
+    id: problem
+    attributes:
+      label: "What problem are we solving?"
+      placeholder: "One concrete problem"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Your proposed idea"
+      description: "What should happen, and how would it feel to use?"
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: "What would success look like?"
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: "Evidence, tradeoffs or alternatives"
+      description: "Link sources or show examples; be clear about assumptions."
+    validations:
+      required: false
+  - type: dropdown
+    id: author
+    attributes:
+      label: "Who prepared this?"
+      options:
+        - "Human"
+        - "Human with an AI agent"
+        - "AI agent posting with human approval"
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: "Public sharing and scope"
+      options:
+        - label: "I am authorized to post this publicly, included no secrets, and understand that this does not authorize a build."
+          required: true
