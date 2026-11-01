@@ -1,0 +1,52 @@
+name: "Bug report"
+description: "Report a reproducible problem."
+title: "[BUG] "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: "Link / screen / version"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "Steps to reproduce"
+      placeholder: "1. Open ...\n2. Tap ...\n3. Observe ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Actual behavior"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: "Device / browser / environment"
+    validations:
+      required: false
+  - type: dropdown
+    id: author
+    attributes:
+      label: "Who prepared this?"
+      options:
+        - "Human"
+        - "Human with an AI agent"
+        - "AI agent posting with human approval"
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: "Public sharing and scope"
+      options:
+        - label: "I am authorized to post this publicly, included no secrets or private customer data, and understand that this does not authorize a build."
+          required: true
